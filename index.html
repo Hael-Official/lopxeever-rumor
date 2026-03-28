@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K-Pop Exclusive: LOPXEEVER vs CORTIS</title>
     <style>
-        /* Hiệu ứng nền lấy cảm hứng từ bức ảnh bạn gửi */
+        /* Nền Gradient mờ lấy cảm hứng từ ảnh màu sắc bạn gửi */
         body { 
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
             line-height: 1.8; 
@@ -17,9 +17,9 @@
             background-attachment: fixed;
         }
 
-        /* Khung bài báo có độ mờ nhẹ (Glassmorphism) */
+        /* Khung bài báo có hiệu ứng Glassmorphism */
         .article-container {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.9);
             padding: 40px;
             border-radius: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -29,7 +29,6 @@
 
         .header { text-align: center; margin-bottom: 40px; }
         
-        /* Màu sắc rực rỡ cho tiêu đề */
         .category { 
             background: linear-gradient(90deg, #ff7eb3, #ff758c, #7afcff);
             -webkit-background-clip: text;
@@ -60,27 +59,17 @@
             margin-bottom: 20px;
         }
 
-        .image-box { 
-            width: 100%; 
-            height: 450px; 
-            background: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop'); /* Hình ảnh màu sắc nghệ thuật */
-            background-size: cover;
-            background-position: center;
-            border-radius: 20px; 
+        /* --- ĐÂY LÀ CHỖ HIỂN THỊ HÌNH ẢNH --- */
+        .teaser-image {
+            width: 100%;
+            border-radius: 20px;
             margin: 30px 0;
-            position: relative;
             box-shadow: 0 15px 35px rgba(255, 105, 180, 0.2);
+            transition: transform 0.3s ease;
         }
-
-        .image-credit {
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            background: rgba(0,0,0,0.5);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 10px;
-            font-size: 10px;
+        
+        .teaser-image:hover {
+            transform: scale(1.02);
         }
 
         .rumor-box {
@@ -90,15 +79,6 @@
             margin: 30px 0;
             border-radius: 0 15px 15px 0;
             font-style: italic;
-        }
-
-        .drop-cap {
-            float: left;
-            font-size: 50px;
-            line-height: 40px;
-            font-weight: bold;
-            padding-right: 10px;
-            color: #ff758c;
         }
 
         .highlight { color: #e91e63; font-weight: bold; }
@@ -119,28 +99,24 @@
     <div class="header">
         <div class="company-badge">@ HAEL ENTERTAINMENT EXCLUSIVE</div>
         <div class="category">Hot Rumor | Industry Analysis</div>
-        <h1>LOPXEEVER: "Vũ Khí Nhẹ Nhàng" Khiến Cả Đế Chế CORTIS Phải Rung Động?</h1>
+        <h1>LOPXEEVER: "Vũ Khí Nhẹ Nhàng" Sẽ Làm Đế Chế CORTIS Phải Rung Động?</h1>
     </div>
 
-    <p><span class="drop-cap">S</span>áng nay, làng giải trí Hàn Quốc chấn động trước thông tin về tân binh <b>LOPXEEVER</b>. Không dùng những concept hầm hố, nhóm nhạc nữ này đang thực hiện một chiến dịch "tấn công thầm lặng" bằng vẻ đẹp thanh thuần, trong trẻo đến mức khiến ngay cả fan của nhóm nhạc nam hàng đầu hiện nay là <span class="highlight">CORTIS</span> cũng phải lung lay.</p>
+    <p>Một cơn bão ngầm đang chuẩn bị quét qua K-pop! Giới mộ điệu đang nín thở trước cái tên <b>LOPXEEVER</b>, nhóm nhạc nữ tân binh được dự đoán sẽ là "khắc tinh" của nhóm nhạc nam hàng đầu hiện nay - <span class="highlight">CORTIS</span>.</p>
 
-    <div class="image-box">
-        <div class="image-credit">Leak: Teaser Visual 01</div>
-    </div>
+    <img src="teaser1_jpg.jpg" alt="Lopxeever Teaser Visual 01" class="teaser-image">
 
-    <h3>Gia thế "khủng" đứng sau HAEL Entertainment</h3>
-    <p>Nguồn tin nội bộ xác nhận, <b>HAEL Entertainment</b> không phải là một cái tên tầm thường. Đây chính là "đứa con tinh thần" của phu nhân chủ tịch <b>Bang Si Hyuk</b> – người đứng sau đế chế HYBE. Sự hậu thuẫn này đảm bảo cho LOPXEEVER một sự đầu tư chỉn chu từ âm nhạc đến hình ảnh mà không tân binh nào có được.</p>
+    <p>Sức hút của LOPXEEVER không chỉ đến từ âm nhạc mà còn ở nhan sắc "nhìn là yêu". Với phong cách thẩm mỹ hòa trộn giữa <i>digital-noir</i> và <i>street-luxe</i>, nhóm đang hướng đến một concept nhắm thẳng vào thế hệ Gen Z và Alpha.</p>
 
     <div class="rumor-box">
-        <b>RUMOR:</b> Đội hình ban đầu của nhóm có 9 người, nhưng 1 thành viên "át chủ bài" đã bí mật rời nhóm để chuẩn bị cho một dự án solo bom tấn. Hiện tại, LOPXEEVER chính thức hoạt động với đội hình 8 thành viên "visual không góc chết".
+        <b>RUMOR:</b> Đội hình ban đầu có 9 thành viên, nhưng một "át chủ bài" đã rời đi solo. 8 cô gái còn lại mang vẻ đẹp thanh thuần, trong trẻo đến mức khiến ngay cả các chàng trai <b>CORTIS</b> phải lung lay.</p>
     </div>
 
-    <h3>Sức mạnh từ sự nhẹ nhàng</h3>
-    <p>Thay vì cạnh tranh bằng sự ồn ào, <b>LOPXEEVER</b> chọn chinh phục bằng nhan sắc "nhìn là yêu". Giới chuyên gia dự đoán, concept *Soft-Crush* của nhóm sẽ trực tiếp đánh vào tâm lý của các chàng trai CORTIS và khiến BXH K-pop sớm bị "đảo chính". Ai cũng đẹp, ai cũng tài năng, LOPXEEVER thực sự là một đối thủ đáng gờm.</p>
+    <p>Liệu sự nhẹ nhàng và gia thế khủng từ <b>vợ của chủ tịch Bang Si Hyuk (HYBE)</b> có đủ sức khiến đế chế <span class="highlight">CORTIS</span> lung lay? Hãy cùng chờ xem câu trả lời từ HAEL Entertainment.</p>
 
     <div class="footer">
         © 2026 K-VIBE NEWS - All Rights Reserved. <br>
-        #Lopxeever #CORTIS #HaelEnt #KpopNews
+        #LopxeeverDebut #HaelEnt #NewGirlGroup
     </div>
 </div>
 
