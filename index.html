@@ -3,171 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EXCLUSIVE: HAEL Ent's New Era</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>HAEL Ent Exclusive: LOPXEEVER vs CORTIS</title>
     <style>
-        :root {
-            --primary-gradient: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
-            --accent-color: #ff4757;
-            --cortis-color: #57606f;
-        }
-
+        /* Reset cơ bản để chống lỗi form */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background: #fdfbfb;
-            color: #2f3542;
-            line-height: 1.7;
-            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background-color: #f8f9fa; 
+            color: #333; 
+            display: flex; 
+            justify-content: center; 
             padding: 20px;
         }
 
-        /* Nền mờ ảo phía sau để bài báo không bị trống trải */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 10% 20%, rgba(255, 192, 203, 0.3) 0%, rgba(176, 224, 230, 0.3) 90%);
-            z-index: -1;
-        }
-
-        .main-wrapper {
-            max-width: 680px;
-            margin: 40px auto;
-            background: #ffffff;
-            border-radius: 40px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.05);
-            border: 1px solid rgba(0,0,0,0.02);
-        }
-
-        .header-tag {
-            display: inline-block;
-            background: #000;
-            color: #fff;
-            padding: 5px 15px;
-            border-radius: 10px;
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-
-        .category-title {
-            color: var(--accent-color);
-            font-weight: 800;
-            font-size: 13px;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            font-size: 32px;
-            font-weight: 800;
-            line-height: 1.2;
-            color: #1e272e;
-            margin-bottom: 30px;
-        }
-
-        /* KHUNG CHỨA ẢNH CỦA BẠN - ĐẸP & KHÔNG LỖI */
-        .image-container {
+        /* Khung bài báo cố định để không bị tràn */
+        .article-card {
+            background: white;
+            max-width: 600px;
             width: 100%;
-            margin: 30px 0;
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .image-container img {
-            width: 100%;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .image-container img:hover {
-            transform: scale(1.03);
-        }
-
-        .content-section {
-            margin-top: 30px;
-        }
-
-        .dropcap {
-            float: left;
-            font-size: 55px;
-            font-weight: 800;
-            line-height: 45px;
-            padding-right: 10px;
-            color: var(--accent-color);
-        }
-
-        .rumor-alert {
-            background: #f1f2f6;
-            padding: 25px;
             border-radius: 20px;
-            margin: 30px 0;
-            border-left: 5px solid var(--accent-color);
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 25px;
         }
 
-        /* Câu chuyện của Hailey */
-        .hailey-story {
-            background: linear-gradient(135deg, #fff9f9 0%, #f0f7ff 100%);
-            padding: 30px;
-            border-radius: 25px;
-            margin-top: 40px;
-            position: relative;
+        /* Header chuyên nghiệp */
+        .badge { background: #000; color: #fff; padding: 5px 12px; border-radius: 5px; font-size: 10px; font-weight: bold; display: inline-block; }
+        .sub-title { color: #ff4757; font-weight: bold; font-size: 12px; margin-top: 15px; display: block; text-transform: uppercase; }
+        h1 { font-size: 24px; margin: 10px 0 20px; line-height: 1.3; }
+
+        /* Ảnh Teaser - Khớp với file bạn đã upload */
+        .main-image { width: 100%; border-radius: 12px; margin-bottom: 20px; display: block; }
+
+        /* Nội dung văn bản */
+        p { margin-bottom: 15px; line-height: 1.6; font-size: 15px; text-align: justify; }
+        .highlight { color: #ff4757; font-weight: bold; }
+        .cortis { color: #5c2cff; font-weight: bold; }
+
+        /* Box tin đồn */
+        .rumor-box { 
+            background: #fff0f3; 
+            border-left: 4px solid #ff4757; 
+            padding: 15px; 
+            margin: 20px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
         }
 
-        .hailey-story h2 {
-            font-size: 20px;
-            color: #1e272e;
-            margin-bottom: 15px;
+        /* Phần về Leader Hailey */
+        .hailey-section {
+            background: #f1f7ff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 25px;
         }
+        .hailey-section h2 { font-size: 18px; color: #0056b3; margin-bottom: 10px; }
 
-        .highlight-text {
-            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-            background-repeat: no-repeat;
-            background-size: 100% 0.3em;
-            background-position: 0 88%;
-            font-weight: bold;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 12px;
-            color: #a4b0be;
-        }
+        .footer { text-align: center; font-size: 11px; color: #999; margin-top: 30px; border-top: 1px solid #eee; padding-top: 15px; }
     </style>
 </head>
 <body>
 
-<div class="main-wrapper">
-    <div class="header-tag">EXCLUSIVE NEWS</div>
-    <span class="category-title">HAEL ENTERTAINMENT • INDUSTRY UPDATE</span>
-    <h1>LOPXEEVER: Sức Mạnh "Mềm" Đối Đầu Cực Gắt Với Đế Chế CORTIS</h1>
+<div class="article-card">
+    <div class="badge">@ HAEL ENTERTAINMENT</div>
+    <span class="sub-title">Hot Rumor | Industry Analysis</span>
+    <h1>LOPXEEVER: "Vũ Khí Nhẹ Nhàng" Khiến Đế Chế CORTIS Phải Rung Động?</h1>
 
-    <div class="content-section">
-        <p><span class="dropcap">K</span>-pop sắp chứng kiến một cuộc "đổi ngôi" chưa từng có. <b>LOPXEEVER</b> - nhóm nhạc nữ được dẫn dắt bởi thủ lĩnh <b>Hailey</b> - đang chuẩn bị cho màn debut chấn động nhằm trực tiếp đối đầu với nhóm nhạc nam <span style="color:var(--cortis-color); font-weight:bold;">CORTIS</span>.</p>
+    <img src="teaser1_jpg.jpg" alt="Lopxeever Visual" class="main-image">
 
-        <div class="image-container">
-            <img src="teaser1_jpg.jpg" alt="Lopxeever Teaser">
-        </div>
+    <p>Sáng nay, làng giải trí chấn động trước thông tin về tân binh <b>LOPXEEVER</b>. Không dùng concept hầm hố, nhóm nhạc nữ này đang tấn công bằng vẻ đẹp thanh thuần, trong trẻo đến mức khiến ngay cả fan của nhóm nhạc nam <span class="cortis">CORTIS</span> cũng phải lung lay.</p>
 
-        <p>Không đi theo lối mòn phá cách ồn ào, LOPXEEVER chinh phục bằng sự nhẹ nhàng khiến các chàng trai <b>CORTIS</b> phải rung động. Với nhan sắc "tiên tử" đồng đều, 8 cô gái này thực sự là những viên ngọc sáng nhất mà <span class="highlight-text">vợ chủ tịch Bang Si Hyuk</span> đã dày công đầu tư.</p>
+    <p>Được biết, <span class="highlight">HAEL ENTERTAINMENT</span> là công ty của <b>vợ chủ tịch Bang Si Hyuk</b> (người sáng lập HYBE). Với sự hậu thuẫn này, nhan sắc 8 cô gái được đánh giá là "vô thực", mỗi người đều là một viên ngọc sáng giá nhất.</p>
 
-        <div class="rumor-alert">
-            <b>RUMOR:</b> Ban đầu nhóm có 9 người, nhưng 1 thành viên đã rời đi solo. Hailey đã kiên cường giữ vững đội hình 8 người để đối đầu với tham vọng chỉ vì lợi nhuận của công ty.
-        </div>
+    <div class="rumor-box">
+        <b>RUMOR:</b> Đội hình ban đầu có 9 thành viên, nhưng 1 người đã rời đi solo. 8 cô gái còn lại sở hữu nhan sắc đồng đều, hứa hẹn một màn debut "đạp đổ" các BXH hiện tại.
+    </div>
 
-        <div class="hailey-story">
-            <h2>Hành trình của Leader Hailey</h2>
-            <p>Ở tuổi 20, <b>Hailey</b> đã làm một việc chấn động: Cô đứng lên chống lại việc công ty chia rẽ các thực tập sinh tài năng vì mục đích thương mại. Hailey đã tự mình tìm kiếm và bảo vệ những "viên ngọc quý" để tạo nên một LOPXEEVER hoàn thiện nhất, khiến ban lãnh đạo HAEL Ent phải thay đổi hoàn toàn cái nhìn về mình.</p>
-        </div>
+    <div class="hailey-section">
+        <h2>Sự phản kháng của Leader Hailey</h2>
+        <p>Ở tuổi 20, <b>Leader Hailey</b> đã làm một việc chấn động khi chứng kiến công ty chia rẽ thực tập sinh vì mục đích lợi nhuận. Cô đã tự mình tìm kiếm những viên ngọc sáng, bảo vệ đồng đội khỏi tham vọng tiền tài để giữ vững thực lực nhóm. Hành động này khiến HAEL Ent phải có cái nhìn hoàn toàn khác về cô gái trẻ này.</p>
     </div>
 
     <div class="footer">
-        © 2026 K-VIBE NEWS. BẢO LƯU MỌI QUYỀN.
+        © 2026 K-VIBE NEWS. All Rights Reserved.
     </div>
 </div>
 
