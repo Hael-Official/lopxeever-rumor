@@ -3,31 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K-Pop Exclusive: LOPXEEVER vs CORTIS</title>
+    <title>K-Pop Insight: Hailey & LOPXEEVER - Sự trỗi dậy của những "viên ngọc sáng"</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.8; color: #222; max-width: 700px; margin: auto; padding: 30px; background: linear-gradient(135deg, #fff5f5 0%, #f0faff 50%, #f5fff5 100%); background-attachment: fixed; }
-        .article-container { background: rgba(255, 255, 255, 0.9); padding: 40px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); backdrop-filter: blur(10px); }
-        .company-badge { background: #000; color: #fff; padding: 5px 15px; border-radius: 50px; font-size: 11px; font-weight: bold; display: inline-block; margin-bottom: 20px; }
-        h1 { font-size: 32px; line-height: 1.3; margin-top: 15px; font-weight: 900; color: #1a1a1a; }
-        .main-img { width: 100%; border-radius: 20px; margin: 30px 0; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-        .rumor-box { background: linear-gradient(to right, #fff0f0, #f0f0ff); border-left: 5px solid #ff758c; padding: 20px; margin: 30px 0; border-radius: 0 15px 15px 0; font-style: italic; }
-        .highlight { color: #e91e63; font-weight: bold; }
+        /* CSS RESET & GENERAL STYLES */
+        * { margin: 0; padding: 0; box-shadow: none; border: none; outline: none; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Montserrat', 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: #222; 
+            overflow-x: hidden;
+            background-color: #000;
+        }
+
+        /* BACKGROUND IMAGE WITH HALFTONE EFFECT Lấy cảm hứng từ ảnh bạn gửi */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: url('https://img-cdn.gemini.googleusercontent.com/image/w:1024,h:1280,fit:cover/image_10.png'); /* SỬ DỤNG HÌNH ẢNH CỦA BẠN */
+            background-size: cover;
+            background-position: center top;
+            opacity: 0.15; /* Làm mờ ảnh nền một chút để chữ dễ đọc */
+            z-index: -2;
+            filter: contrast(120%) brightness(80%);
+        }
+
+        /* Halftone Pattern Overlay để tăng chất phá cách */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADxfon+AAAAPklEQVQYV2NkgIInT55UMDEx/f8PDAx/Pjx4EMDExPD8/8PDAxMTEyMDE9P///8fPDgwMTExMTExMTExMTExMTExMTExAAAAABJRU5ErkJggg==');
+            opacity: 0.08;
+            z-index: -1;
+        }
+
+        /* CONTAINER FOR CONTENTS */
+        .container {
+            max-width: 750px;
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* HEADER & TYPOGRAPHY */
+        .header { text-align: center; margin-bottom: 50px; }
+        
+        .company-badge {
+            background: #000;
+            color: #fff;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .category { 
+            background: linear-gradient(90deg, #ff7eb3, #ff758c, #7afcff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800; 
+            text-transform: uppercase; 
+            font-size: 14px; 
+            letter-spacing: 3px; 
+            display: block;
+        }
+
+        h1 { 
+            font-size: 34px; 
+            line-height: 1.3; 
+            margin-top: 15px; 
+            font-weight: 900; 
+            color: #1a1a1a;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        h3 {
+            font-size: 20px;
+            margin: 40px 0 20px;
+            color: #e91e63;
+            font-weight: 800;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        p { margin-bottom: 25px; }
+
+        /* BODY DECORATIONS */
+        .drop-cap {
+            float: left;
+            font-size: 60px;
+            line-height: 50px;
+            font-weight: bold;
+            padding-right: 15px;
+            color: #ff758c;
+            text-shadow: 1px 1px 0 #000;
+        }
+
+        .highlight-cortis { color: #5c2cff; font-weight: bold; }
+        .highlight-hael { color: #e91e63; font-weight: bold; font-size: 1.1em; }
+        
+        .rumor-box {
+            background: linear-gradient(135deg, rgba(255, 117, 140, 0.1), rgba(122, 252, 255, 0.1));
+            border-left: 6px solid #ff758c;
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 0 20px 20px 0;
+            font-style: italic;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* TEXT COLOR & BOLDING FOR VISUAL APPRECIATION */
+        .visual-p b {
+            color: #e91e63;
+        }
+
+        .visual-p {
+            background: linear-gradient(to right, #222, #444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        /* HAILLY STORY HIGHLIGHTS */
+        .hailey-highlight {
+            border: 2px dashed #ff758c;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 15px;
+            background: #fff;
+        }
+
+        /* FOOTER */
+        .footer { 
+            text-align: center; 
+            font-size: 12px; 
+            color: #888; 
+            margin-top: 50px; 
+            border-top: 1px solid #eee;
+            padding-top: 25px;
+        }
     </style>
 </head>
 <body>
-<div class="article-container">
-    <div class="company-badge">@ HAEL ENTERTAINMENT EXCLUSIVE</div>
-    <h1>LOPXEEVER: Tân binh nữ sẽ "đạp đổ" ngôi vương của CORTIS?</h1>
-    
-    <p>Sáng nay, làng giải trí chấn động trước thông tin về <b>LOPXEEVER</b>. Không theo concept hầm hố, nhóm nhạc nữ này đang tấn công bằng vẻ đẹp thanh thuần khiến ngay cả fan của nhóm nhạc nam đình đám <span class="highlight">CORTIS</span> cũng phải lung lay.</p>
 
-    <img src="teaser1_jpg.jpg" class="main-img">
+<div class="container">
+    <div class="header">
+        <div class="company-badge">@ HAEL ENTERTAINMENT EXCLUSIVE INSIGHT</div>
+        <span class="category">ĐỘC QUYỀN: BÍ MẬT ĐẰNG SAU SỰ RA MẮT CỦA LOPXEEVER</span>
+        <h1>LOPXEEVER & Hailey: "Vị Cứu Tinh" Đứng Sau Concept "Nhẹ Nhàng Nhất Phá Cách Nhất"?</h1>
+    </div>
 
-    <p>HAEL Entertainment chính là công ty do <b>vợ của chủ tịch Bang Si Hyuk</b> sáng lập. Với sự hậu thuẫn này, LOPXEEVER sở hữu dàn visual cực phẩm, nhan sắc khiến bất cứ ai cũng phải rung động.</p>
+    <p><span class="drop-cap">C</span>uộc chiến K-pop chưa bao giờ hạ nhiệt. Khi nhóm nhạc nam đình đám <span class="highlight-cortis">CORTIS</span> đang "phá cách" thống trị thị trường, sự xuất hiện sắp tới của tân binh nữ <b>LOPXEEVER</b> được dự đoán sẽ là một "cơn địa chấn nhẹ nhàng" đánh gục mọi BXH. Nhưng câu chuyện thực sự đứng sau concept này không chỉ là sự nhẹ nhàng, mà là một cuộc chiến nội bộ đầy kịch tính vì năng lực và sự phản kháng đầy chấn động của một cô gái 20 tuổi: <b>Leader Hailey</b>.</p>
+
+    <h3>Nhan sắc "Thần Tiên" và những "Viên Ngọc" bị chia rẽ</h3>
+    <p>Nguồn tin nội bộ xác nhận, <b>hael entertainment</b> không chỉ là một công ty giải trí, mà là một "thế lực" ngầm của <span class="highlight-hael">vợ chủ tịch Bang Si Hyuk</span> (người sáng lập HYBE). Nhờ sự hậu thuẫn "khủng", LOPXEEVER sở hữu dàn visual cực phẩm.</p>
+    <p class="visual-p">Nhan sắc của 8 cô gái thực sự là một "định nghĩa lại về vẻ đẹp K-pop". <b>Ai cũng đẹp, ai cũng tài năng,</b> mỗi người là một viên ngọc sáng. <b style="color:#222">Họ mang vẻ đẹp thanh thuần, trong trẻo khiến các chàng trai CORTIS phải rung động,</b> nhưng ẩn sau sự nhẹ nhàng đó là một sự phá cách đầy mạnh mẽ, cuốn hút không thể cưỡng lại.</p>
 
     <div class="rumor-box">
-        <b>RUMOR:</b> Đội hình ban đầu có 9 người, nhưng 1 thành viên đã rời đi solo. 8 cô gái còn lại mang phong cách nhẹ nhàng, sẵn sàng đối đầu trực diện với CORTIS.
+        <b>THÔNG TIN RÒ RỈ:</b> Đội hình ban đầu của nhóm có 9 thành viên, nhưng một "át chủ bài" đã rời đi để hoạt động solo. 8 cô gái còn lại mang phong cách nhẹ nhàng nhưng ẩn chứa sức mạnh phá cách, sẵn sàng làmBXH K-pop sớm bị "đảo chính".
+    </div>
+
+    <h3>Bí mật về Leader Hailey & Việc chấn động HAEL Entertainment</h3>
+    <p><b>Leader Hailey</b> không chỉ là một idol. Cô là một nhân vật đã chứng kiến sự thực dụng của cty. Hailey đã nhiều lần nhìn các TTS tài năng chán nản bỏ cuộc và rời đi trong nuối tiếc chỉ vì cty muốn tách team, chia rẽ TTS ra 2 nhóm (1 nhóm 4 mem hiện đanc train), cho thấy họ tham vọng tiền tài hơn năng lực.</p>
+    
+    <div class="hailey-highlight">
+        <h4>Việc chấn động của một cô gái 20 tuổi:</h4>
+        <p>Hailey nhận ra bản thân có thể tìm những viên ngọc sáng thay cty. Cô đã bí mật kết nối các TTS khác, tổ chức các buổi tập riêng, đối đầu trực tiếp với sự chia rẽ của cty để bảo vệ một đội hình mạnh nhất, tài năng nhất. Hailey không chỉ bảo vệ nhóm nhạc, mà còn bảo vệ lòng tin của thế hệ Gen Z vào tài năng và năng lực bản thân trước sự thực dụng. Việc làm này đã khiến công ty phải chấn động và có cái nhìn hoàn toàn khác về cô gái 20 tuổi đầy kiên cường.</p>
+    </div>
+
+    <p>Sự trỗi dậy của <b>LOPXEEVER</b>, dưới sự dẫn dắt của <b>Leader Hailey</b> và sự hậu thuẫn của vợ Bang PD, hứa hẹn sẽ mang đến một concept "Soft-Crush" vừa nhẹ nhàng đánh gục trái tim vừa phá cách đầy mạnh mẽ, sẵn sàng làm rung động cả đế chế <span class="highlight-cortis">CORTIS</span> và cả K-pop.</p>
+
+    <div class="footer">
+        © 2026 K-VIBE INSIGHTS - All Rights Reserved. <br>
+        #Lopxeever #CORTIS #Hailey #HaelEnt #BangSiHyuk
     </div>
 </div>
+
 </body>
 </html>
